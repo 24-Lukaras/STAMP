@@ -8,21 +8,18 @@
 
   <Commands package="STAMP">
     <Groups>
-      <Group guid="STAMP" id="MyMenuGroup" priority="0x0600">
+      <Group guid="STAMP" id="STAMP_Group" priority="0x0624">
         <Parent guid="VSMainMenu" id="Tools"/>
       </Group>
     </Groups>
-
-    <!--This section defines the elements the user can interact with, like a menu command or a button
-        or combo box in a toolbar. -->
     <Buttons>
-      <Button guid="STAMP" id="MyCommand" priority="0x0100" type="Button">
-        <Parent guid="STAMP" id="MyMenuGroup" />
-        <Icon guid="ImageCatalogGuid" id="StatusInformation" />
+      <Button guid="STAMP" id="CreateStaticMappingCommand" priority="0x0600" type="Button">
+        <Parent guid="STAMP" id="STAMP_Group" />
+        <Icon guid="ImageCatalogGuid" id="TransformListItem" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <Strings>
-          <ButtonText>My Command</ButtonText>
-          <LocCanonicalName>.STAMP.MyCommand</LocCanonicalName>
+          <ButtonText>STAMP Create Mapping</ButtonText>
+          <LocCanonicalName>.STAMP.CreateStaticMapping</LocCanonicalName>
         </Strings>
       </Button>
     </Buttons>
@@ -30,8 +27,8 @@
 
   <Symbols>
     <GuidSymbol name="STAMP" value="{1910e465-20db-4c07-9516-494db1296341}">
-      <IDSymbol name="MyMenuGroup" value="0x0001" />
-      <IDSymbol name="MyCommand" value="0x0100" />
+      <IDSymbol name="STAMP_Group" value="0x0001" />
+      <IDSymbol name="CreateStaticMappingCommand" value="0x0100" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>
