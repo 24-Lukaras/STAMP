@@ -39,7 +39,7 @@ namespace STAMP.Lib
                 .FirstOrDefault();
 
             var modifiedClass = mapperClass.AddMembers(methodDefinitions.Select(x => x.CreateMethod()).ToArray());
-            if (modifiedClass.Modifiers.Any(x => !x.IsKind(SyntaxKind.StaticKeyword)))
+            if (!modifiedClass.Modifiers.Any(x => x.IsKind(SyntaxKind.StaticKeyword)))
             {
                 modifiedClass = modifiedClass.AddModifiers(SyntaxFactory.Token(SyntaxKind.StaticKeyword));
             }
